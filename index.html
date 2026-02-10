@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coderick Assisted Living | Margate, FL | Residential Care</title>
+    <meta name="description" content="Compassionate residential assisted living in Margate, FL. 1-to-3 caregiver ratio, home-cooked meals, and hurricane-ready safety. Schedule a tour today.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts: Merriweather (Headings) & Lato (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Config for "Sunshine & Warmth" Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            peach: '#FFDAB9',
+                            teal: '#20B2AA',
+                            tealDark: '#178E87',
+                            cream: '#FDF5E6',
+                            navy: '#2C3E50',
+                            accent: '#F97316', // Orange for CTAs
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Merriweather', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        body { font-family: 'Lato', sans-serif; color: #2C3E50; }
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(44, 62, 80, 0.4), rgba(44, 62, 80, 0.4)), url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Mobile Sticky Footer Spacer */
+        .mobile-spacer { padding-bottom: 80px; }
+        @media (min-width: 768px) { .mobile-spacer { padding-bottom: 0; } }
+    </style>
+</head>
+<body class="bg-brand-cream mobile-spacer">
+
+    <!-- Top Bar (Desktop Only) -->
+    <div class="hidden md:block bg-brand-navy text-white py-2 text-sm">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span><i class="fas fa-map-marker-alt mr-2 text-brand-peach"></i> Serving Margate, Coral Springs, & Coconut Creek</span>
+            <span><i class="fas fa-certificate mr-2 text-brand-peach"></i> AHCA License #12345 (Pending) &nbsp;|&nbsp; <i class="fas fa-bolt mr-2 text-yellow-400"></i> Hurricane Ready (Full Generator)</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-brand-teal text-white p-2 rounded-full">
+                    <i class="fas fa-home fa-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold text-brand-navy block leading-none">Coderick</span>
+                    <span class="text-xs text-brand-tealDark tracking-widest uppercase">Assisted Living</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-brand-navy">
+                <a href="#about" class="hover:text-brand-teal transition">About Us</a>
+                <a href="#services" class="hover:text-brand-teal transition">Care & Services</a>
+                <a href="#gallery" class="hover:text-brand-teal transition">Our Home</a>
+                <a href="#contact" class="hover:text-brand-teal transition">Contact</a>
+                <a href="tel:9545550123" class="text-brand-navy hover:text-brand-accent">
+                    <i class="fas fa-phone-alt mr-1"></i> (954) 555-0123
+                </a>
+                <a href="#tour" class="bg-brand-accent hover:bg-orange-600 text-white px-5 py-2 rounded-full shadow-lg transition transform hover:scale-105">
+                    Book a Tour
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-brand-navy text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#about" class="block px-4 py-3 border-b border-gray-100 hover:bg-brand-cream">About Us</a>
+            <a href="#services" class="block px-4 py-3 border-b border-gray-100 hover:bg-brand-cream">Care Services</a>
+            <a href="#gallery" class="block px-4 py-3 border-b border-gray-100 hover:bg-brand-cream">Gallery</a>
+            <a href="#contact" class="block px-4 py-3 hover:bg-brand-cream">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-[600px] flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-3xl text-white drop-shadow-lg">
+            <span class="bg-brand-teal px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4 inline-block shadow-md">
+                Now Accepting New Residents
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                More Care. Less Worry.
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 font-light text-gray-100">
+                The safety of a facility. The comfort of a real home. <br class="hidden md:block">
+                Experience our <strong>1-to-3 caregiver ratio</strong> right here in Margate.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#tour" class="bg-brand-accent hover:bg-orange-600 text-white text-lg font-bold px-8 py-4 rounded-full shadow-xl transition transform hover:scale-105">
+                    Schedule a Free Lunch & Tour
+                </a>
+                <a href="#services" class="bg-white hover:bg-gray-100 text-brand-navy text-lg font-bold px-8 py-4 rounded-full shadow-xl transition">
+                    View Care Services
+                </a>
+            </div>
+        </div>
+        
+        <!-- Trust Badge Overlay -->
+        <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/50 to-transparent p-4 md:hidden">
+            <p class="text-white text-xs text-center"><i class="fas fa-shield-alt text-brand-peach"></i> COVID-19 Safe & Hurricane Prepared</p>
+        </div>
+    </header>
+
+    <!-- Value Prop Strip -->
+    <section class="bg-white py-12 shadow-sm relative z-10 -mt-2 mx-4 md:mx-auto max-w-6xl rounded-xl border-t-4 border-brand-teal">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-2">
+                <i class="fas fa-heart text-4xl text-brand-teal mb-3"></i>
+                <h3 class="font-bold text-brand-navy">1:3 Staff Ratio</h3>
+                <p class="text-sm text-gray-600">Personal attention daily</p>
+            </div>
+            <div class="p-2">
+                <i class="fas fa-utensils text-4xl text-brand-teal mb-3"></i>
+                <h3 class="font-bold text-brand-navy">Home Cooked</h3>
+                <p class="text-sm text-gray-600">3 meals + snacks</p>
+            </div>
+            <div class="p-2">
+                <i class="fas fa-user-nurse text-4xl text-brand-teal mb-3"></i>
+                <h3 class="font-bold text-brand-navy">24/7 Awake Staff</h3>
+                <p class="text-sm text-gray-600">Always someone there</p>
+            </div>
+            <div class="p-2">
+                <i class="fas fa-dollar-sign text-4xl text-brand-teal mb-3"></i>
+                <h3 class="font-bold text-brand-navy">All-Inclusive</h3>
+                <p class="text-sm text-gray-600">No hidden care fees</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Caregiver helping senior" class="rounded-2xl shadow-2xl relative z-10">
+                    <div class="absolute -bottom-6 -right-6 bg-brand-peach w-24 h-24 rounded-full z-0 hidden md:block"></div>
+                    <div class="absolute -top-6 -left-6 bg-brand-teal w-24 h-24 rounded-full z-0 hidden md:block opacity-20"></div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-6">Don't Let Mom Get Lost in the Crowd</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Large facilities can feel like hotels—impersonal and overwhelming. At <strong>Coderick LLC</strong>, we are a family. 
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        We know your dad's favorite song, exactly how your mom likes her tea, and we notice immediately if something feels "off". Real care requires real connection, and that only happens in a home setting.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-brand-teal mr-3"></i> Locally owned and operated in Margate</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-brand-teal mr-3"></i> High-speed Wi-Fi & Cable included</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-brand-teal mr-3"></i> Quiet, residential neighborhood</li>
+                    </ul>
+                    <a href="#tour" class="text-brand-teal font-bold hover:underline text-lg">Meet our Administrator <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Complete Peace of Mind</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We handle the daily tasks so you can go back to being a daughter or son, instead of a caregiver.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-cream p-8 rounded-xl shadow-sm hover:shadow-md transition border border-transparent hover:border-brand-peach">
+                    <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-pills text-2xl text-brand-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Medication Management</h3>
+                    <p class="text-gray-600">We securely store and administer all medications. You never have to worry about a missed dose or refill again.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-cream p-8 rounded-xl shadow-sm hover:shadow-md transition border border-transparent hover:border-brand-peach">
+                    <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-hands-wash text-2xl text-brand-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Activities of Daily Living</h3>
+                    <p class="text-gray-600">Respectful assistance with bathing, dressing, grooming, and toileting. We prioritize dignity and independence.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-cream p-8 rounded-xl shadow-sm hover:shadow-md transition border border-transparent hover:border-brand-peach">
+                    <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-carrot text-2xl text-brand-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Nutrition & Dining</h3>
+                    <p class="text-gray-600">Three nutritious, home-cooked meals served family-style, plus snacks available anytime. Hydration is monitored daily.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-brand-cream p-8 rounded-xl shadow-sm hover:shadow-md transition border border-transparent hover:border-brand-peach">
+                    <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-broom text-2xl text-brand-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Housekeeping & Laundry</h3>
+                    <p class="text-gray-600">Fresh linens, clean clothes, and a spotless room. We handle all the chores so residents can relax.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-brand-cream p-8 rounded-xl shadow-sm hover:shadow-md transition border border-transparent hover:border-brand-peach">
+                    <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-music text-2xl text-brand-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Social & Activities</h3>
+                    <p class="text-gray-600">Daily activities including music, puzzles, gentle exercise, and bingo to keep the mind sharp and spirits high.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-brand-cream p-8 rounded-xl shadow-sm hover:shadow-md transition border border-transparent hover:border-brand-peach">
+                    <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-shield-virus text-2xl text-brand-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Safety First</h3>
+                    <p class="text-gray-600">Equipped with grab bars, keypad exits, fire sprinklers, and a full-house generator for hurricane season.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg text-brand-navy font-bold mb-4">Care options starting at <span class="text-brand-accent">$3,500/month</span> all-inclusive.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-16 bg-brand-teal text-white px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <i class="fas fa-quote-left text-4xl text-brand-peach opacity-50 mb-6"></i>
+            <p class="text-2xl md:text-3xl font-serif italic mb-8">
+                "We moved Dad here after a bad experience at a big facility. The difference was night and day. He gained weight, he's smiling again. Thank you Coderick team."
+            </p>
+            <div class="flex justify-center items-center">
+                <div class="text-left">
+                    <p class="font-bold text-lg">Maria S.</p>
+                    <p class="text-brand-peach text-sm">Daughter of Resident</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / The Home -->
+    <section id="gallery" class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-navy">A Peek Inside Our Home</h2>
+                <p class="text-gray-600">Clean, bright, and accessible.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a1c002085d2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Living Room" class="w-full h-full object-cover transition transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-bold">Common Area</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1595878715977-2e8f8df85bd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bedroom" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dining" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1605276378663-177fe6a4f3f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Garden" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bathroom Safety" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Booking & Contact -->
+    <section id="tour" class="py-16 bg-brand-cream border-t border-brand-peach px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row bg-white rounded-2xl shadow-xl overflow-hidden">
+                
+                <!-- Contact Info & Map -->
+                <div class="lg:w-1/2 p-8 md:p-12 bg-brand-navy text-white">
+                    <h2 class="text-3xl font-bold mb-6">Visit Us</h2>
+                    <p class="mb-8 text-gray-300">The best way to know if we are right for your family is to come see the home, smell the coffee, and meet the staff.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-accent text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold">Location</h3>
+                                <p>5215 NW 27TH CT<br>Margate, FL 33063</p>
+                                <p class="text-sm text-gray-400 mt-1">(Near Northwest Medical Center)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-brand-accent text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold">Phone</h3>
+                                <p><a href="tel:9545550123" class="hover:text-brand-peach">(954) 555-0123</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-brand-accent text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold">Tour Hours</h3>
+                                <p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sun: By Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Embed Map -->
+                    <div class="mt-8 h-48 rounded-lg overflow-hidden border-2 border-brand-teal">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.412497880963!2d-80.19827048496924!3d26.248386883418244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91b9ac50d0357%3A0xe54359487c663f7!2s5215%20NW%2027th%20Ct%2C%20Margate%2C%20FL%2033063!5e0!3m2!1sen!2sus!4v1631234567890!5m2!1sen!2sus" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:w-1/2 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-brand-navy mb-2">Schedule a Tour</h2>
+                    <p class="text-gray-600 mb-6">No obligation. Come have lunch with us.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Thank you! In a real website, this would email the administrator. Please call us for this demo.');" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal outline-none transition" placeholder="Jane Doe" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal outline-none transition" placeholder="(954) 555-0123" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Desired Move-in Timeframe</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal outline-none transition">
+                                <option>Immediately (Urgent)</option>
+                                <option>Within 30 Days</option>
+                                <option>Just Researching</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">How can we help?</label>
+                            <textarea class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal outline-none transition" rows="3" placeholder="Tell us a little about your loved one's needs..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-accent hover:bg-orange-600 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:scale-[1.02]">
+                            Confirm Request
+                        </button>
+                        <p class="text-xs text-gray-500 text-center mt-4"><i class="fas fa-lock"></i> We respect your privacy. Your info is never shared.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-navy text-white pt-12 pb-24 md:pb-12 px-4">
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <h4 class="text-2xl font-serif font-bold mb-2">Coderick LLC</h4>
+                <p class="text-gray-400 text-sm">Residential Assisted Living & Adult Care</p>
+                <p class="text-gray-400 text-sm mt-2">AHCA License #12345 (Pending)</p>
+            </div>
+            
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-gray-400 hover:text-brand-peach transition"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brand-peach transition"><i class="fab fa-google fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="container mx-auto max-w-6xl border-t border-gray-700 mt-8 pt-8 text-center text-xs text-gray-500">
+            &copy; 2024 Coderick LLC. All Rights Reserved. | <a href="#" class="hover:text-white">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Footer Action Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-4 flex gap-4 md:hidden z-50">
+        <a href="tel:9545550123" class="flex-1 bg-white border-2 border-brand-teal text-brand-teal font-bold py-3 rounded-lg text-center flex items-center justify-center">
+            <i class="fas fa-phone-alt mr-2"></i> Call Now
+        </a>
+        <a href="#tour" class="flex-1 bg-brand-accent text-white font-bold py-3 rounded-lg text-center flex items-center justify-center shadow-md">
+            Book Tour
+        </a>
+    </div>
+
+    <!-- Simple Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
